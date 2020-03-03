@@ -1,0 +1,125 @@
+fw($width)
+  flex-basis $width
+  max-width $width
+
+ps()
+  display block
+  content ""
+  position absolute
+
+h()
+  display block
+  content ""
+  position absolute
+  left 0
+  right 0
+  margin 0 auto
+
+hb()
+  position absolute
+  left 0
+  right 0
+  margin 0 auto
+
+v()
+  display block
+  content ""
+  position absolute
+  top 0
+  bottom 0
+  margin auto 0
+
+vb()
+  position absolute
+  top 0
+  bottom 0
+  margin auto 0
+
+hv()
+  display block
+  content ""
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
+  margin auto
+
+hvb()
+  display block
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
+  margin auto
+
+tr($all_ = .2s)
+  transition all $all_ ease-out
+
+trc($color_ = .2s)
+  transition color $color_ ease-out
+
+tro($opacity_ = .2s)
+  transition opacity $opacity_ ease-out
+
+//----------
+
+trf($fill_ = .2s)
+  transition fill $fill_ ease-out
+
+trw($width_ = .2s)
+  transition width $width_ ease-out
+
+//----------
+
+trt($transform_ = .2s)
+  transition transform $transform_ ease-out
+
+trto($transform_ = .2s, $opacity_ = .2s)
+  transition transform $transform_ ease-out, opacity $opacity_ ease-out
+
+//----------
+
+trb($bc = .2s)
+  transition border-color $bc ease-out
+
+trbc($bdc = .2s, $color_ = .2s)
+  transition border-color $bdc ease-out, color $color_ ease-out
+
+//----------
+
+trbg($bgc = .2s)
+  transition background-color $bgc ease-out
+
+trbgc($bgc = .2s, $color_ = .2s)
+  transition background-color $bgc ease-out, color $color_ ease-out
+
+trbgb($bgc = .2s, $bdc = .2s)
+  transition background-color $bgc ease-out, border-color $bdc ease-out
+
+trbgbc($bgc = .2s, $bdc = .2s, $c = .2s)
+  transition background-color $bgc ease-out, border-color $bdc ease-out, color $c ease-out
+
+select-reset()
+  -moz-appearance none
+  -webkit-appearance none
+  appearance none
+  &::-ms-expand
+    display none
+
+customScroll()
+  scrollbar-base-color transparent //@stylint ignore
+  scrollbar-3dlight-color transparent //@stylint ignore
+  scrollbar-arrow-color $light-blue //@stylint ignore
+  scrollbar-track-color rgba($black, .1)
+  scrollbar-darkshadow-color rgba($black, .1)
+  scrollbar-face-color $light-blue //@stylint ignore
+  scrollbar-highlight-color rgba($black, .1)
+  scrollbar-shadow-color $light-blue //@stylint ignore
+  &::-webkit-scrollbar
+    width 4px
+  &::-webkit-scrollbar-thumb
+    background $light-blue
+  &::-webkit-scrollbar-track
+    background transparent

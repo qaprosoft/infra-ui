@@ -1,0 +1,44 @@
+//helpers basic variables
+$wrapperMinWidth = 320px
+$wrapperMaxWidth = 1432px
+$radius = 1.6rem
+$radius-sm = .8rem
+
+$font-default = 'Montserrat'
+
+//screen size variables
+$middle-desk = 1440px
+$small-desk = 1280px
+$tablet = 1024px
+$mobile = 740px
+
+//color variables
+$white = #FFFFFF
+$black = #000000
+$dark-blue = #29168A
+$light-blue = #D9E3EB
+$gray = #5F6368
+$blue = #0350E5
+
+// text-variables
+
+$primary = $dark-blue
+
+// screen sizes
+$screen-wide-max = 1210px
+$screen-tablet-max = 1023px
+$screen-mobile-max = 740px
+
+media-wide()
+  @media screen and (max-width: $small-desk)
+    {block} //@stylint ignore
+
+media-tablet()
+  @media screen and (max-width: $tablet)
+    {block} //@stylint ignore
+
+media-mobile()
+  @media screen and (max-width: $mobile)
+    {block} //@stylint ignore
+
+

@@ -1,0 +1,45 @@
+.s-product
+  padding: 2rem 0
+  &__text
+    max-height 7.2rem
+    padding-right: 10px
+    overflow-y auto
+    customScroll()
+  p
+    font-weight: 500
+    line-height: 2.4rem
+  &__title
+    margin-bottom: 1.7rem
+  &__inner
+    border 1px solid $light-blue
+    border-radius $radius
+    display: flex
+    height 47.8rem
+    overflow: hidden
+  &__part
+    padding: 2.4rem
+    display: flex
+    flex-direction: column
+    &._info
+      flex-basis: 51.5%
+      max-width: 51.5%
+    &._show
+      flex-basis: 48.5%
+      max-width: 48.5%
+      position: relative
+      &:before
+        ps()
+        width: 1px
+        height: 100%
+        left: 0
+        top: 0
+        background $light-blue
+  &__top
+    display: flex
+    margin-bottom: 2.4rem
+  &__img
+    display: block
+    width: 8.4rem
+    height: auto
+    margin-right: 2rem
+

@@ -1,0 +1,11 @@
+package-lock.json
+
+# Node.JS
+node_modules/
+npm-debug.log
+
+# OS or Editor folders
+.idea/
+.svn/
+.git/
+.DS_Store
