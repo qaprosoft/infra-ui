@@ -1,19 +1,19 @@
 # infra-ui
 QPS infrastructure UI.
 
-#Installation
+# Installation
 
 1. ```clone this repo```
 2. go to project folder: ```cd path/to/...```
 3. ```npm i```
 
-#Development
+# Development
 
 ```npm start``` 
 
 will open and watch in: http://localhost:3000
 
-#Production
+# Production
 
 ```npm run build```
 
