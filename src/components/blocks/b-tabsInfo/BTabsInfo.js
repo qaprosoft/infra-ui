@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
+import {PropTypes} from 'prop-types';
 
-export const BTabsInfo = ({props}) => {
+const BTabsInfo = ({props}) => {
 
     const [active, setActive] = useState(0);
 
@@ -33,6 +34,12 @@ export const BTabsInfo = ({props}) => {
         </div>
     )
 }
+
+BTabsInfo.propTypes = {
+    props : PropTypes.object.isRequired
+}
+
+export {BTabsInfo}
 
 
 

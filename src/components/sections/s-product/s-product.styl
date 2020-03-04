@@ -18,8 +18,6 @@
     overflow: hidden
   &__part
     padding: 2.4rem
-    display: flex
-    flex-direction: column
     &._info
       flex-basis: 51.5%
       max-width: 51.5%
@@ -27,6 +25,8 @@
       flex-basis: 48.5%
       max-width: 48.5%
       position: relative
+      display: flex
+      flex-direction: column
       &:before
         ps()
         width: 1px
@@ -39,7 +39,19 @@
     margin-bottom: 2.4rem
   &__img
     display: block
+    flex-shrink 0
     width: 8.4rem
-    height: auto
+    height: 8.8rem
     margin-right: 2rem
 
++media-tablet()
+  .s-product
+    &__inner
+      display: block
+      height: auto
+    &__part
+      &._info
+      &._show
+        max-width 100%
+        &:before
+          content none

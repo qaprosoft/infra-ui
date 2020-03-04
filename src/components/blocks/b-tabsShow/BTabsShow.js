@@ -1,17 +1,17 @@
 import React, {useState} from 'react';
+import {PropTypes} from 'prop-types';
 
-export const BTabsShow = ({props}) => {
+const BTabsShow = ({props}) => {
 
     const [active, setActive] = useState(0);
+    const show = props.show[active];
 
     return (
         <div className='b-tabsShow'>
-
             <div className='b-tabsShow__content'>
                 <div className='b-tabsShow__item'>
                     {
-                        console.log('--------000000', props)
-                       // props.children[active]
+                        show && show()
                     }
                 </div>
             </div>
@@ -34,6 +34,8 @@ export const BTabsShow = ({props}) => {
     )
 }
 
+BTabsShow.propTypes = {
+    props : PropTypes.object.isRequired
+}
 
-
-
+export {BTabsShow}

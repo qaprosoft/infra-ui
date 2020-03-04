@@ -6,6 +6,41 @@ import tab2 from '@img/tab-2.png'
 import tab3 from '@img/tab-3.png'
 import tab4 from '@img/tab-4.png'
 import tab5 from '@img/tab-5.png'
+import {BVideo} from '@c-b/b-video/BVideo'
+import {BStat} from '@c-b/b-stat/BStat'
+import jenkins from '@img/logo-jenkins.png'
+import fiver from '@img/logo-fiver.png'
+import sonar from '@img/logo-sonar.png'
+import qps from '@img/logo-qps.png'
+
+
+export const DataCards = [
+    {
+        logo: jenkins,
+        title: 'Jenkins',
+        social: [{icon: 'git', href: 'https://...'}, {icon: 'telegram', href: 'https://...'}, {icon: 'web', href: 'https://...'}]
+    },
+    {
+        logo: fiver,
+        title: 'Zafira',
+        social: [{icon: 'git', href: 'https://...'}, {icon: 'telegram', href: 'https://...'}, {icon: 'web', href: 'https://...'}]
+    },
+    {
+        logo: sonar,
+        title: 'Sonar',
+        social: [{icon: 'git', href: 'https://...'}, {icon: 'telegram', href: 'https://...'}, {icon: 'web', href: 'https://...'}]
+    },
+    {
+        logo: qps,
+        title: 'Selenium Hub',
+        social: [{icon: 'git', href: 'https://...'}, {icon: 'telegram', href: 'https://...'}, {icon: 'web', href: 'https://...'}]
+    },
+    {
+        logo: qps,
+        title: 'Selenium Hub',
+        social: [{icon: 'git', href: 'https://...'}, {icon: 'telegram', href: 'https://...'}, {icon: 'web', href: 'https://...'}]
+    }
+]
 
 
 // -------  data is array of objects to make sections {object equal section)  ------------
@@ -21,7 +56,6 @@ export const DataProducts = [
             }
         },
         tabsInfo: {
-            id: 'carinaInfo',
             tabs :['About Carina', 'BDD framework', 'Demo', 'Sample IOS', 'Sample Android'],
             info: (i) => {
                 switch(i) {
@@ -36,11 +70,13 @@ export const DataProducts = [
                             </>
                         )
                     case 1 :
-                        return <>
-                            <h3>BDD Framework</h3>
-                            <p>Carina framework is built on top of most popular open-source solutions like Selenium, Appium, TestNG allowing to reduce dependence on specific technology stack.</p>
-                            <p>As far as our framework is built in Java, it is cross-platform. Tests may be easily executed both on Unix or Windows OS. All you need is JDK 8 installed.</p>
-                        </>
+                        return (
+                            <>
+                                <h3>BDD Framework</h3>
+                                <p>Carina framework is built on top of most popular open-source solutions like Selenium, Appium, TestNG allowing to reduce dependence on specific technology stack.</p>
+                                <p>As far as our framework is built in Java, it is cross-platform. Tests may be easily executed both on Unix or Windows OS. All you need is JDK 8 installed.</p>
+                            </>
+                        )
                     default:
                         return null
                 }
@@ -48,27 +84,13 @@ export const DataProducts = [
         },
         tabsShow: {
             tabs : [
-                {
-                    src: tab1,
-                    alt: 'img for tab1'
-                },
-                {
-                    src: tab2,
-                    alt: 'img for tab2'
-                },
-                {
-                    src: tab3,
-                    alt: 'img for tab3'
-                },
-                {
-                    src: tab4,
-                    alt: 'img for tab4'
-                },
-                {
-                    src: tab5,
-                    alt: 'img for tab5'
-                }
+                {src: tab1, alt: 'img for tab1'},
+                {src: tab2, alt: 'img for tab2'},
+                {src: tab3, alt: 'img for tab3'},
+                {src: tab4, alt: 'img for tab4'},
+                {src: tab5, alt: 'img for tab5'}
             ],
+            show: [BVideo, BStat]
         }
     },
     {
@@ -81,7 +103,6 @@ export const DataProducts = [
             },
         },
         tabsInfo: {
-            id: 'zafiraInfo',
             tabs : ['About Zafira', 'Zafira UI', 'Zafira Client', 'Postgres', 'Rabbitmq'],
             info: (i) => {
                 switch(i) {
@@ -93,10 +114,12 @@ export const DataProducts = [
                             </>
                         )
                     case 1 :
-                        return <>
-                            <h3>Zafira UI</h3>
-                            <p>Zafira was initially designed to track automation progress of the tests written using Carina automation framework but you are capable to integrate Zafira client into your own automation tool. We are actively developing clients for different languages and frameworks but still looking for active community to provide better support.</p>
-                        </>
+                        return (
+                            <>
+                                <h3>Zafira UI</h3>
+                                <p>Zafira was initially designed to track automation progress of the tests written using Carina automation framework but you are capable to integrate Zafira client into your own automation tool. We are actively developing clients for different languages and frameworks but still looking for active community to provide better support.</p>
+                            </>
+                        )
                     default:
                         return null
                 }
@@ -104,27 +127,13 @@ export const DataProducts = [
         },
         tabsShow: {
             tabs : [
-                {
-                    src: tab1,
-                    alt: 'img for tab1'
-                },
-                {
-                    src: tab2,
-                    alt: 'img for tab2'
-                },
-                {
-                    src: tab3,
-                    alt: 'img for tab3'
-                },
-                {
-                    src: tab4,
-                    alt: 'img for tab4'
-                },
-                {
-                    src: tab5,
-                    alt: 'img for tab5'
-                }
+                {src: tab1, alt: 'img for tab1'},
+                {src: tab2, alt: 'img for tab2'},
+                {src: tab3, alt: 'img for tab3'},
+                {src: tab4, alt: 'img for tab4'},
+                {src: tab5, alt: 'img for tab5'}
             ],
+            show: [BVideo, BStat]
         }
     }
 ]
