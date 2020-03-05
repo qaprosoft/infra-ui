@@ -1,4 +1,5 @@
 package-lock.json
+static/
 
 # Node.JS
 node_modules/

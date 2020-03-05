@@ -18,3 +18,4 @@ will open and watch in: http://localhost:3000
 ```npm run build```
 
 will make and save in `static/` directory
+will open a browser window with the structure of js files(results of `webpack-bundle-analyzer`)

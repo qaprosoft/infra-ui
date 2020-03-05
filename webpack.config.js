@@ -7,9 +7,10 @@ const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugi
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
 
-const URL_PROJECT = 'infra-ui'
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
+
+const URL_PROJECT = isDev ? 'infra-ui' : 'http://localhost:63342/infra-ui'
 
 const alias = {
     '@img': path.resolve(__dirname, 'src/_img'),

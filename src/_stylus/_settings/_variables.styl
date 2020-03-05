@@ -29,7 +29,11 @@ $screen-wide-max = 1210px
 $screen-tablet-max = 1023px
 $screen-mobile-max = 740px
 
-media-wide()
+media-md()
+  @media screen and (max-width: $middle-desk)
+    {block} //@stylint ignore
+
+media-sd()
   @media screen and (max-width: $small-desk)
     {block} //@stylint ignore
 

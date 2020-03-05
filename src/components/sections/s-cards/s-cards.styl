@@ -8,5 +8,20 @@
   &__item
     padding: 1.6rem
     flex-basis: 35.6rem
-    max-width 100%
+    max-width 25%
+    flex-grow: 1
 
++media-md()
+  .s-cards
+    &__item
+      max-width 33.3333333%
+
++media-tablet()
+  .s-cards
+    &__item
+      max-width 50%
+
++media-mobile()
+  .s-cards
+    &__item
+      max-width 100%
