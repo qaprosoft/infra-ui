@@ -2,10 +2,10 @@ import React from 'react'
 import {LSocial} from '@c/lists/l-social/LSocial';
 import {PropTypes} from 'prop-types';
 
-const BCard = ({card}) => {
+const BCard = ({card, openInfoBar}) => {
 
     return (
-        <div className="b-card">
+        <div className="b-card" onClick={() => openInfoBar()}>
             <div className="b-card__inner">
                 <div className="b-card__top">
                     <LSocial list={card.social}/>
@@ -22,7 +22,8 @@ const BCard = ({card}) => {
 }
 
 BCard.propTypes = {
-    card : PropTypes.object.isRequired
+    card : PropTypes.object.isRequired,
+    openInfoBar : PropTypes.func.isRequired
 }
 
 export {BCard}

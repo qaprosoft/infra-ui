@@ -9,7 +9,7 @@ import tab5 from '@img/tab-5.png'
 import {BVideo} from '@c-b/b-video/BVideo'
 import {BStat} from '@c-b/b-stat/BStat'
 import jenkins from '@img/logo-jenkins.png'
-import fiver from '@img/logo-fiver.png'
+import fiverr from '@img/logo-fiver.png'
 import sonar from '@img/logo-sonar.png'
 import qps from '@img/logo-qps.png'
 
@@ -21,7 +21,7 @@ export const DataCards = [
         social: [{icon: 'git', href: 'https://...'}, {icon: 'telegram', href: 'https://...'}, {icon: 'web', href: 'https://...'}]
     },
     {
-        logo: fiver,
+        logo: fiverr,
         title: 'Zafira',
         social: [{icon: 'git', href: 'https://...'}, {icon: 'telegram', href: 'https://...'}, {icon: 'web', href: 'https://...'}]
     },
@@ -41,9 +41,6 @@ export const DataCards = [
         social: [{icon: 'git', href: 'https://...'}, {icon: 'telegram', href: 'https://...'}, {icon: 'web', href: 'https://...'}]
     }
 ]
-
-
-// -------  data is array of objects to make sections {object equal section)  ------------
 
 export const DataProducts = [
     {
@@ -137,3 +134,39 @@ export const DataProducts = [
         }
     }
 ]
+
+export const DataInfoBar = {
+    top: {
+        title: 'Zafira News',
+        text: 'Here is the latest news of Zafira project. Stay in touch.',
+        logo: fiverr
+    },
+    info: [
+        {
+            title: 'Lorem ipsum dolor sit amet',
+            date: '11/3/2019',
+            show: BVideo,
+            text: () => {
+                return (
+                    <>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae ut arcu aliquam suspendisse enim commodo. Nullam dictum adipiscing elementum, gravida diam. Aliquet aliquam vestibulum, elementum ac fringilla cursus et lacus ipsum. Nullam risus laoreet bibendum consectetur nec erat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae ut arcu aliquam suspendisse enim commodo. Nullam dictum adipiscing elementum, gravida diam. Aliquet aliquam vestibulum, elementum ac fringilla cursus et lacus ipsum. Nullam risus laoreet bibendum consectetur nec erat.</p>
+                    </>
+                )
+            }
+        },
+        {
+            title: 'Lorem ipsum dolor sit amet dretse jufgerts gioiosd',
+            date: '09/3/2019',
+            show: BStat,
+            text: () => {
+                return (
+                    <>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae ut arcu aliquam suspendisse enim commodo. Nullam dictum adipiscing elementum, gravida diam. Aliquet aliquam vestibulum, elementum ac fringilla cursus et lacus ipsum. Nullam risus laoreet bibendum consectetur nec erat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae ut arcu aliquam suspendisse enim commodo. Nullam dictum adipiscing elementum, gravida diam. Aliquet aliquam vestibulum, elementum ac fringilla cursus et lacus ipsum. Nullam risus laoreet bibendum consectetur nec erat.</p>
+                    </>
+                )
+            }
+        }
+    ]
+}

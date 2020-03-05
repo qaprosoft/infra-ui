@@ -1,14 +1,16 @@
 import React from 'react'
-import {DataProducts} from '@cnt/home/dataHome';
-import {DataCards} from '@cnt/home/dataHome';
+import {DataProducts, DataCards} from '@cnt/home/dataHome';
 import {SProduct} from '@c-s/s-product/SProduct';
 import {SCards} from '@c-s/s-cards/SCards';
 
-export const Home = () => {
+export const Home = ({openInfoBar}) => {
 
     return (
         <>
-            <SCards cards={DataCards}/>
+            <SCards
+                cards={DataCards}
+                openInfoBar={openInfoBar}
+            />
             {
                 DataProducts.map((section, i) => {
                     return  (
@@ -24,7 +26,3 @@ export const Home = () => {
         </>
     )
 }
-
-
-
-

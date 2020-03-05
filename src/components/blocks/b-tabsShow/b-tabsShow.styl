@@ -12,6 +12,10 @@
     border 1px solid $light-blue
     border-radius $radius-sm
     overflow: hidden
+    .desktop &
+      trsh()
+      &:hover
+        box-shadow 1px 1px 10px #ccc
   &__content
     flex-grow 1
     flex-basis 35.4rem

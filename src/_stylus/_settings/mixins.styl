@@ -89,6 +89,14 @@ trbc($bdc = .2s, $color_ = .2s)
 
 //----------
 
+trsh($sh = .2s)
+  transition box-shadow $sh ease-out
+
+trbsh($bdc = .2s, $sh = .2s)
+  transition border-color $bdc ease-out, box-shadow $sh ease-out
+
+//----------
+
 trbg($bgc = .2s)
   transition background-color $bgc ease-out
 
@@ -111,15 +119,16 @@ select-reset()
 customScroll()
   scrollbar-base-color transparent //@stylint ignore
   scrollbar-3dlight-color transparent //@stylint ignore
-  scrollbar-arrow-color $light-blue //@stylint ignore
-  scrollbar-track-color rgba($black, .1)
-  scrollbar-darkshadow-color rgba($black, .1)
+  scrollbar-arrow-color $white //@stylint ignore
+  scrollbar-track-color $white
+  scrollbar-darkshadow-color $white
   scrollbar-face-color $light-blue //@stylint ignore
-  scrollbar-highlight-color rgba($black, .1)
+  scrollbar-highlight-color $white
   scrollbar-shadow-color $light-blue //@stylint ignore
   &::-webkit-scrollbar
     width 4px
   &::-webkit-scrollbar-thumb
     background $light-blue
+    border-radius 2px
   &::-webkit-scrollbar-track
     background transparent

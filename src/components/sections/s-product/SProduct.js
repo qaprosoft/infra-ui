@@ -27,8 +27,6 @@ const SProduct = ({top, tabsInfo, tabsShow}) => {
                         <BTabsShow props={tabsShow} />
                     </div>
                 </div>
-                <div>
-                </div>
             </div>
         </div>
     )
