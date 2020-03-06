@@ -17,28 +17,33 @@ export const DataCards = [
     {
         logo: jenkins,
         title: 'Jenkins',
+        color: '#29168A',
         social: [{icon: 'git', href: 'https://...'}, {icon: 'telegram', href: 'https://...'}, {icon: 'web', href: 'https://...'}],
         news: 1
     },
     {
         logo: fiverr,
         title: 'Zafira',
+        color: '#17D69C',
         social: [{icon: 'git', href: 'https://...'}, {icon: 'telegram', href: 'https://...'}, {icon: 'web', href: 'https://...'}],
         news: 2
     },
     {
         logo: sonar,
         title: 'Sonar',
+        color: '#70BFFE',
         social: [{icon: 'git', href: 'https://...'}, {icon: 'telegram', href: 'https://...'}, {icon: 'web', href: 'https://...'}]
     },
     {
         logo: qps,
         title: 'Selenium Hub',
+        color: '#D04678',
         social: [{icon: 'git', href: 'https://...'}, {icon: 'telegram', href: 'https://...'}, {icon: 'web', href: 'https://...'}]
     },
     {
         logo: qps,
         title: 'Selenium Hub',
+        color: '#D04678',
         social: [{icon: 'git', href: 'https://...'}, {icon: 'telegram', href: 'https://...'}, {icon: 'web', href: 'https://...'}]
     }
 ]

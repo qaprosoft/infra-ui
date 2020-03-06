@@ -24,7 +24,7 @@ const BCard = ({card, openInfoBar}) => {
                     <div className="b-card__img">
                         <img src={card.logo} alt={`logo-${card.logo}`} data-object-fit='contain' />
                     </div>
-                    <h1>{card.title}</h1>
+                    <h1 style={{color:card.color}}>{card.title}</h1>
                 </div>
             </div>
         </div>
