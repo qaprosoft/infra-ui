@@ -10,8 +10,6 @@ const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
 
-const URL_PROJECT = isDev ? 'infra-ui' : 'http://localhost:63342/infra-ui'
-
 const alias = {
     '@img': path.resolve(__dirname, 'src/_img'),
     '@sh': path.resolve(__dirname, 'src/shared'),
@@ -90,7 +88,7 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
   entry: {
-    main: ['core-js/stable', 'regenerator-runtime/runtime', './index.js'],
+    main: ['core-js/stable', 'regenerator-runtime/runtime', 'svgxuse/svgxuse.js', './index.js'],
   },
   output: {
     filename: filename('js'),
@@ -130,8 +128,8 @@ module.exports = {
             {
                 loader: 'file-loader',
                 options: {
-                    name: `img/[name].[ext]`,
-                    publicPath: isProd? `${URL_PROJECT}/static/` : ''
+                    name: '[name].[ext]',
+                    outputPath:  'img/'
                 }
             },
             {

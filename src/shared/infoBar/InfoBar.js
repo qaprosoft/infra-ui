@@ -2,7 +2,7 @@ import React from 'react'
 import {Icon} from '@c-ui/icons/Icon';
 import {PropTypes} from 'prop-types';
 
-const InfoBar = ({cls, infoBar, isNews, closeInfoBar, updateInfoBar}) => {
+const InfoBar = ({cls, infoBar, news, closeInfoBar, updateInfoBar}) => {
 
     return (
         <div className={cls} onClick={() => closeInfoBar()}>
@@ -28,7 +28,7 @@ const InfoBar = ({cls, infoBar, isNews, closeInfoBar, updateInfoBar}) => {
                             </div>
                         </div>
                         {
-                            !isNews && <button
+                            !news && <button
                                 className="ib__btn-update"
                                 type="button"
                                 onClick={() => updateInfoBar()}
@@ -46,11 +46,9 @@ const InfoBar = ({cls, infoBar, isNews, closeInfoBar, updateInfoBar}) => {
                                             <h2 className="ib__item-title">{item.title}</h2>
                                             <span className="ib__item-date">{item.date}</span>
                                         </div>
-                                        <div className="ib__item-show">
                                             {
-                                                item.show && item.show()
+                                                item.show && <div className="ib__item-show">{item.show()}</div>
                                             }
-                                        </div>
                                         <div className="ib__item-text">
                                             {
                                                 item.text && item.text()
@@ -70,7 +68,7 @@ const InfoBar = ({cls, infoBar, isNews, closeInfoBar, updateInfoBar}) => {
 InfoBar.propTypes = {
     cls: PropTypes.string.isRequired,
     infoBar: PropTypes.object.isRequired,
-    isNews: PropTypes.bool.isRequired,
+    news: PropTypes.number,
     closeInfoBar: PropTypes.func.isRequired,
     updateInfoBar: PropTypes.func.isRequired
 }

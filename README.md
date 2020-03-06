@@ -17,5 +17,9 @@ will open and watch in: http://localhost:3000
 
 ```npm run build```
 
-will make and save in `static/` directory
+will make and save in `static/` directory and
 will open a browser window with the structure of js files(results of `webpack-bundle-analyzer`)
+
+# Browsers list
+
+all > 0.25%, not dead in last versions

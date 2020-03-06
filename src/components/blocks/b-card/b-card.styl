@@ -9,6 +9,9 @@
     &:hover
       border-color $white
       box-shadow 0 12px 44px rgba(90, 87, 103, 0.2);
+  &__top
+    display: flex
+    justify-content: space-between
   &__content
     display: flex
     align-items: center
@@ -17,3 +20,22 @@
     width: 8.2rem
     height: 8.2rem
     margin-right: 2.6rem
+  &__note
+    position: relative
+    padding: 3px
+  &__qty
+    display: block
+    position: absolute
+    top: 0
+    right: 0
+    width: 1.5rem
+    height: 1.5rem
+    border-radius 50%
+    background-color: #F20505
+    font-size 1.2rem
+    line-height: 1.5rem
+    text-align: center
+    color $white
+  .icon-bill
+    width: 24px
+    height: 23px
