@@ -8,8 +8,7 @@ export const Home = () => {
 
     const initState = {
         isOpen: false,
-        news: 0,
-        infoBar: DataUpdate
+        news: 0
     }
     const [state, setState] = useState(initState);
 
