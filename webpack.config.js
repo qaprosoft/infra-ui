@@ -95,7 +95,7 @@ module.exports = {
     path: path.resolve(__dirname, 'static')
   },
   resolve: {
-    extensions: ['.js', 'styl'],
+    extensions: ['.js', '.styl'],
     alias: alias
   },
   optimization: optimization(),

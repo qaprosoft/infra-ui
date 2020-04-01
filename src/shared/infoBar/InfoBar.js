@@ -1,11 +1,11 @@
 import React from 'react'
-import {Icon} from '@c-ui/icons/Icon';
+import {Icon} from '@sh/icons/Icon';
 import {PropTypes} from 'prop-types';
 
-const InfoBar = ({cls, infoBar, news, closeInfoBar, updateInfoBar}) => {
+const InfoBar = ({isOpen, infoBar, news, closeInfoBar, updateInfoBar}) => {
 
     return (
-        <div className={cls} onClick={() => closeInfoBar()}>
+        <div className={isOpen ? 'ib _open' : 'ib'} onClick={() => closeInfoBar()}>
             <div className="ib__inner" onClick={(e) => e.stopPropagation()}>
                 <div className="ib__head">
                     <button
@@ -69,7 +69,7 @@ const InfoBar = ({cls, infoBar, news, closeInfoBar, updateInfoBar}) => {
 }
 
 InfoBar.propTypes = {
-    cls: PropTypes.string.isRequired,
+    isOpen: PropTypes.bool,
     infoBar: PropTypes.object,
     news: PropTypes.number,
     closeInfoBar: PropTypes.func.isRequired,

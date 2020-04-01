@@ -1,6 +1,6 @@
 import React from 'react'
 import bgVideo from '@img/bg-video.jpg'
-import {Icon} from '@c-ui/icons/Icon'
+import {Icon} from '@sh/icons/Icon'
 
 export const BVideo = () => {
 

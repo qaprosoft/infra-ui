@@ -1,5 +1,5 @@
 import React from 'react'
-import {Icon} from '@c-ui/icons/Icon'
+import {Icon} from '@sh/icons/Icon'
 
 export const Header = () => (
 

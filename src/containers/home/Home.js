@@ -40,7 +40,7 @@ export const Home = () => {
                 }
             </div>
             <InfoBar
-                cls={state.isOpen ? 'ib _open' : 'ib'}
+                isOpen={state.isOpen}
                 infoBar={state.infoBar}
                 news={state.news}
                 closeInfoBar={closeInfoBar}

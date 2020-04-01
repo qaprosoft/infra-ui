@@ -1,7 +1,7 @@
 import React from 'react'
 import {LSocial} from '@c/lists/l-social/LSocial';
 import {PropTypes} from 'prop-types';
-import {Icon} from '@c-ui/icons/Icon';
+import {Icon} from '@sh/icons/Icon';
 
 const BCard = ({card, openInfoBar}) => {
 
