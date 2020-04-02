@@ -7,7 +7,9 @@
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
-    "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json"
+    "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json",
+    "lint:write": "eslint --debug src/ --fix",
+    "prettier": "prettier --write src/**/*.js"
   },
   "keywords": [
     "js",
@@ -29,12 +31,18 @@
     "cross-env": "^6.0.3",
     "css-loader": "^3.4.2",
     "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.1",
     "eslint-loader": "^3.0.3",
+    "eslint-plugin-prettier": "^3.1.2",
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.2.3",
     "image-webpack-loader": "^6.0.0",
+    "lint-staged": "^10.1.1",
     "mini-css-extract-plugin": "^0.9.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "prettier": "^2.0.2",
     "style-loader": "^1.1.2",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
@@ -51,6 +59,14 @@
     "react-device-detect": "^1.11.14",
     "react-dom": "^16.12.0",
     "svgxuse": "^1.2.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.(js|jsx)": ["npm run lint:write", "git add"]
   },
   "browserslist": "> 0.25%, not dead"
 }

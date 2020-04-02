@@ -1,8 +1,7 @@
 import React from 'react'
-import {Icon} from '@sh/icons/Icon'
+import { Icon } from '@sh/icons/Icon'
 
 export const Header = () => (
-
     <header className="h">
         <div className="container">
             <div className="h__inner">
