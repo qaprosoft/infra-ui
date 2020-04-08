@@ -1,11 +1,13 @@
 import React from 'react'
-import {Icon} from '@sh/icons/Icon';
-import {PropTypes} from 'prop-types';
+import { Icon } from '@sh/icons/Icon'
+import { PropTypes } from 'prop-types'
 
-const InfoBar = ({isOpen, infoBar, news, closeInfoBar, updateInfoBar}) => {
-
+const InfoBar = ({ isOpen, infoBar, news, closeInfoBar, updateInfoBar }) => {
     return (
-        <div className={isOpen ? 'ib _open' : 'ib'} onClick={() => closeInfoBar()}>
+        <div
+            className={isOpen ? 'ib _open' : 'ib'}
+            onClick={() => closeInfoBar()}
+        >
             <div className="ib__inner" onClick={(e) => e.stopPropagation()}>
                 <div className="ib__head">
                     <button
@@ -13,56 +15,65 @@ const InfoBar = ({isOpen, infoBar, news, closeInfoBar, updateInfoBar}) => {
                         type="button"
                         onClick={() => closeInfoBar()}
                     >
-                        <Icon name="cross"/>
+                        <Icon name="cross" />
                     </button>
                 </div>
-                {
-                    infoBar && <div className="ib__content">
+                {infoBar && (
+                    <div className="ib__content">
                         <div className="ib__top">
                             <div className="ib__top-inner">
                                 <div className="ib__img">
-                                    <img src={infoBar.top.logo} alt={`logo-${infoBar.top.logo}`} data-object-fit='contain' />
+                                    <img
+                                        src={infoBar.top.logo}
+                                        alt={`logo-${infoBar.top.logo}`}
+                                        data-object-fit="contain"
+                                    />
                                 </div>
                                 <div className="ib__info">
-                                    <h1 className="ib__title">{infoBar.top.title}</h1>
-                                    <p className="ib__text">{infoBar.top.text}</p>
+                                    <h1 className="ib__title">
+                                        {infoBar.top.title}
+                                    </h1>
+                                    <p className="ib__text">
+                                        {infoBar.top.text}
+                                    </p>
                                 </div>
                             </div>
-                            {
-                                !news && <button
+                            {!news && (
+                                <button
                                     className="ib__btn-update"
                                     type="button"
                                     onClick={() => updateInfoBar()}
                                 >
                                     Update now
                                 </button>
-                            }
+                            )}
                         </div>
                         <div className="ib__get">
-                            {
-                                infoBar.info.map((item, i) => {
-                                    return  (
-                                        <div className="ib__item" key={i}>
-                                            <div className="ib__item-top">
-                                                <h2 className="ib__item-title">{item.title}</h2>
-                                                <span className="ib__item-date">{item.date}</span>
-                                            </div>
-                                            {
-                                                item.show && <div className="ib__item-show">{item.show()}</div>
-                                            }
-                                            <div className="ib__item-text">
-                                                {
-                                                    item.text && item.text()
-                                                }
-                                            </div>
+                            {infoBar.info.map((item, i) => {
+                                return (
+                                    <div className="ib__item" key={i}>
+                                        <div className="ib__item-top">
+                                            <h2 className="ib__item-title">
+                                                {item.title}
+                                            </h2>
+                                            <span className="ib__item-date">
+                                                {item.date}
+                                            </span>
                                         </div>
-                                    )
-                                })
-                            }
+                                        {item.show && (
+                                            <div className="ib__item-show">
+                                                {item.show()}
+                                            </div>
+                                        )}
+                                        <div className="ib__item-text">
+                                            {item.text && item.text()}
+                                        </div>
+                                    </div>
+                                )
+                            })}
                         </div>
                     </div>
-                }
-
+                )}
             </div>
         </div>
     )
@@ -73,7 +84,7 @@ InfoBar.propTypes = {
     infoBar: PropTypes.object,
     news: PropTypes.number,
     closeInfoBar: PropTypes.func.isRequired,
-    updateInfoBar: PropTypes.func.isRequired
+    updateInfoBar: PropTypes.func.isRequired,
 }
 
-export {InfoBar}
+export { InfoBar }
