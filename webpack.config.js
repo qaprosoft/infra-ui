@@ -31,7 +31,6 @@ const optimization = () => {
             chunks: 'all',
         },
     }
-
     if (isProd) {
         config.minimizer = [
             new OptimizeCssAssetWebpackPlugin(),
@@ -159,8 +158,8 @@ module.exports = {
                 test: /\.(ttf|woff|woff2|eot)$/,
                 loader: 'file-loader',
                 options: {
-                    outputPath: 'fonts',
-                    publicPath: isProd ? `../fonts` : '',
+                    name: '[name].[ext]',
+                    outputPath: 'fonts/',
                 },
             },
             {
@@ -171,7 +170,12 @@ module.exports = {
                         loader: 'babel-loader',
                         options: babelOptions('@babel/preset-react'),
                     },
-                    'eslint-loader',
+                    {
+                        loader: 'eslint-loader',
+                        options: {
+                            fix: true,
+                        },
+                    },
                 ],
             },
         ],
