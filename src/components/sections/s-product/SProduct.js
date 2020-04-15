@@ -1,3 +1,5 @@
+// TODO: Remove
+
 import React from 'react'
 import { BTabsInfo } from '@c-b/b-tabsInfo/BTabsInfo'
 import { BTabsShow } from '@c-b/b-tabsShow/BTabsShow'
