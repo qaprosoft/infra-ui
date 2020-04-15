@@ -1,18 +1,13 @@
 import React, { useState } from 'react'
-import {
-    DataProducts,
-    DataCards,
-    DataUpdate,
-    DataNews,
-} from '@cnt/home/dataHome'
-import { SProduct } from '@c-s/s-product/SProduct'
+import { DataCards, DataUpdate, DataNews } from '@cnt/home/dataHome'
 import { SCards } from '@c-s/s-cards/SCards'
 import { InfoBar } from '@sh/infoBar/InfoBar'
+import { Header } from '@sh/header/Header'
 
 export const Home = () => {
     const initState = {
         isOpen: false,
-        news: 0,
+        news: DataNews.info.length,
     }
     const [state, setState] = useState(initState)
 
@@ -22,7 +17,8 @@ export const Home = () => {
             news: news,
             infoBar: news ? DataNews : DataUpdate,
         })
-    const closeInfoBar = () => setState({ ...state, isOpen: false })
+
+    const closeInfoBar = () => setState({ ...state, isOpen: false, news: 0 })
 
     const updateInfoBar = () => {
         console.log('------  update infoBar --------')
@@ -30,18 +26,9 @@ export const Home = () => {
 
     return (
         <>
+            <Header news={state.news} openInfoBar={openInfoBar} />
             <div className="wp__content">
                 <SCards cards={DataCards} openInfoBar={openInfoBar} />
-                {DataProducts.map((section, i) => {
-                    return (
-                        <SProduct
-                            top={section.top}
-                            tabsInfo={section.tabsInfo}
-                            tabsShow={section.tabsShow}
-                            key={i}
-                        />
-                    )
-                })}
             </div>
             <InfoBar
                 isOpen={state.isOpen}
