@@ -2,13 +2,11 @@ import React from 'react'
 import { LSocial } from '@c/lists/l-social/LSocial'
 import { PropTypes } from 'prop-types'
 
-const BCard = ({ card, openInfoBar }) => {
+const BCard = ({ card }) => {
     return (
-        <div className="b-card" onClick={() => openInfoBar()}>
-            <div className="b-card__inner">
-                <div className="b-card__top">
-                    <LSocial list={card.social} />
-                </div>
+        <div className="b-card">
+            <LSocial list={card.social} />
+            <a className="b-card__inner" href={card.href} target="_blank">
                 <div className="b-card__content">
                     <div className="b-card__img">
                         <img
@@ -19,14 +17,13 @@ const BCard = ({ card, openInfoBar }) => {
                     </div>
                     <h1 style={{ color: card.color }}>{card.title}</h1>
                 </div>
-            </div>
+            </a>
         </div>
     )
 }
 
 BCard.propTypes = {
     card: PropTypes.object.isRequired,
-    openInfoBar: PropTypes.func.isRequired,
 }
 
 export { BCard }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { DataCards, DataUpdate, DataNews } from '@cnt/home/dataHome'
+import { DataCards, Messages } from '@cnt/home/dataHome'
 import { SCards } from '@c-s/s-cards/SCards'
 import { InfoBar } from '@sh/infoBar/InfoBar'
 import { Header } from '@sh/header/Header'
@@ -7,33 +7,37 @@ import { Header } from '@sh/header/Header'
 export const Home = () => {
     const initState = {
         isOpen: false,
-        news: DataNews.info.length,
+        messagesAmount: Messages.length || 0,
     }
     const [state, setState] = useState(initState)
 
-    const openInfoBar = (news) =>
+    const openInfoBar = (messagesAmount) =>
         setState({
             isOpen: true,
-            news: news,
-            infoBar: news ? DataNews : DataUpdate,
+            messagesAmount: messagesAmount,
+            messages: Messages,
         })
 
-    const closeInfoBar = () => setState({ ...state, isOpen: false, news: 0 })
+    const closeInfoBar = () =>
+        setState({ ...state, isOpen: false, messagesAmount: 0 })
 
     const updateInfoBar = () => {
-        console.log('------  update infoBar --------')
+        console.log('------  update messages --------')
     }
 
     return (
         <>
-            <Header news={state.news} openInfoBar={openInfoBar} />
+            <Header
+                messagesAmount={state.messagesAmount}
+                openInfoBar={openInfoBar}
+            />
             <div className="wp__content">
-                <SCards cards={DataCards} openInfoBar={openInfoBar} />
+                <SCards cards={DataCards} />
             </div>
             <InfoBar
                 isOpen={state.isOpen}
-                infoBar={state.infoBar}
-                news={state.news}
+                messages={state.messages}
+                messagesAmount={state.messagesAmount}
                 closeInfoBar={closeInfoBar}
                 updateInfoBar={updateInfoBar}
             />

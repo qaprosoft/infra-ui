@@ -1,19 +1,26 @@
 .b-card
-  padding: 1.6rem 1.6rem 0
-  background: $white
-  border: 1px solid $light-blue
-  border-radius: $radius
-  cursor: pointer
-  .desktop &
-    trbsh()
-    &:hover
-      border-color $white
-      box-shadow 0 12px 44px rgba(90, 87, 103, 0.2);
+  position: relative
+  &__inner
+    padding: 5.6rem 1.6rem 1.6rem
+    display block
+    background: $white
+    border: 1px solid $light-blue
+    border-radius: $radius
+    cursor: pointer
+    .desktop &
+      trbsh()
+      &:hover
+        border-color $white
+        box-shadow 0 12px 44px rgba(90, 87, 103, 0.2);
   &__content
     display: flex
     align-items: center
-    min-height 15.2rem
+    min-height 13rem
   &__img
     width: 8.2rem
     height: 8.2rem
     margin-right: 2.6rem
+  .l-social
+    position: absolute
+    left 1.6rem
+    top 1.6rem

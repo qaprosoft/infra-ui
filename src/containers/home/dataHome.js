@@ -18,28 +18,29 @@ export const DataCards = [
         logo: jenkins,
         title: 'Jenkins',
         color: '#29168A',
+        href: 'https://externalpage',
         social: [
             { icon: 'git', href: 'https://...' },
             { icon: 'telegram', href: 'https://...' },
             { icon: 'web', href: 'https://...' },
         ],
-        news: 1,
     },
     {
         logo: fiverr,
         title: 'Zafira',
         color: '#17D69C',
+        href: 'https://externalpage',
         social: [
             { icon: 'git', href: 'https://...' },
             { icon: 'telegram', href: 'https://...' },
             { icon: 'web', href: 'https://...' },
         ],
-        news: 2,
     },
     {
         logo: sonar,
         title: 'Sonar',
         color: '#70BFFE',
+        href: 'https://externalpage',
         social: [
             { icon: 'git', href: 'https://...' },
             { icon: 'telegram', href: 'https://...' },
@@ -50,6 +51,7 @@ export const DataCards = [
         logo: qps,
         title: 'Selenium Hub',
         color: '#D04678',
+        href: 'https://externalpage',
         social: [
             { icon: 'git', href: 'https://...' },
             { icon: 'telegram', href: 'https://...' },
@@ -60,6 +62,7 @@ export const DataCards = [
         logo: qps,
         title: 'Selenium Hub',
         color: '#D04678',
+        href: 'https://externalpage',
         social: [
             { icon: 'git', href: 'https://...' },
             { icon: 'telegram', href: 'https://...' },
@@ -68,65 +71,54 @@ export const DataCards = [
     },
 ]
 
-export const DataNews = {
-    top: {
-        title: 'Zafira News',
-        text: 'Here is the latest news of Zafira project. Stay in touch.',
-        logo: fiverr,
+export const Messages = [
+    {
+        title: 'Lorem ipsum dolor sit amet',
+        date: '11/3/2019',
+        show: BVideo,
+        text: () => (
+            <>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vitae ut arcu aliquam suspendisse enim commodo. Nullam
+                    dictum adipiscing elementum, gravida diam. Aliquet aliquam
+                    vestibulum, elementum ac fringilla cursus et lacus ipsum.
+                    Nullam risus laoreet bibendum consectetur nec erat.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vitae ut arcu aliquam suspendisse enim commodo. Nullam
+                    dictum adipiscing elementum, gravida diam. Aliquet aliquam
+                    vestibulum, elementum ac fringilla cursus et lacus ipsum.
+                    Nullam risus laoreet bibendum consectetur nec erat.
+                </p>
+            </>
+        ),
     },
-    info: [
-        {
-            title: 'Lorem ipsum dolor sit amet',
-            date: '11/3/2019',
-            show: BVideo,
-            text: () => (
-                <>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vitae ut arcu aliquam suspendisse enim commodo. Nullam
-                        dictum adipiscing elementum, gravida diam. Aliquet
-                        aliquam vestibulum, elementum ac fringilla cursus et
-                        lacus ipsum. Nullam risus laoreet bibendum consectetur
-                        nec erat.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vitae ut arcu aliquam suspendisse enim commodo. Nullam
-                        dictum adipiscing elementum, gravida diam. Aliquet
-                        aliquam vestibulum, elementum ac fringilla cursus et
-                        lacus ipsum. Nullam risus laoreet bibendum consectetur
-                        nec erat.
-                    </p>
-                </>
-            ),
-        },
-        {
-            title: 'Lorem ipsum dolor sit amet dretse jufgerts gioiosd',
-            date: '09/3/2019',
-            show: BStat,
-            text: () => (
-                <>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vitae ut arcu aliquam suspendisse enim commodo. Nullam
-                        dictum adipiscing elementum, gravida diam. Aliquet
-                        aliquam vestibulum, elementum ac fringilla cursus et
-                        lacus ipsum. Nullam risus laoreet bibendum consectetur
-                        nec erat.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vitae ut arcu aliquam suspendisse enim commodo. Nullam
-                        dictum adipiscing elementum, gravida diam. Aliquet
-                        aliquam vestibulum, elementum ac fringilla cursus et
-                        lacus ipsum. Nullam risus laoreet bibendum consectetur
-                        nec erat.
-                    </p>
-                </>
-            ),
-        },
-    ],
-}
+    {
+        title: 'Lorem ipsum dolor sit amet dretse jufgerts gioiosd',
+        date: '09/3/2019',
+        show: BStat,
+        text: () => (
+            <>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vitae ut arcu aliquam suspendisse enim commodo. Nullam
+                    dictum adipiscing elementum, gravida diam. Aliquet aliquam
+                    vestibulum, elementum ac fringilla cursus et lacus ipsum.
+                    Nullam risus laoreet bibendum consectetur nec erat.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vitae ut arcu aliquam suspendisse enim commodo. Nullam
+                    dictum adipiscing elementum, gravida diam. Aliquet aliquam
+                    vestibulum, elementum ac fringilla cursus et lacus ipsum.
+                    Nullam risus laoreet bibendum consectetur nec erat.
+                </p>
+            </>
+        ),
+    },
+]
 
 export const DataUpdate = {
     top: {

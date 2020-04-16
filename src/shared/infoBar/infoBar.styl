@@ -53,22 +53,17 @@
       height: 4rem
       font-size 1.2rem
       font-weight: 600
-      color $dark-blue
-      background: rgba(41, 22, 138, 0.04);
+      color $white
+      background: $dark-blue
       border-radius: 2rem
-      margin-top: 3rem
     &-close
     &-update
       .desktop &
         tro()
         &:hover
           opacity .7
-  &__top
-    padding: 3.2rem
-    border-bottom: 1px solid $light-blue
-    &-inner
-      display: flex
-      align-items: center
+  &__update
+    padding 0 3.2rem
   &__img
     display: block
     flex-shrink 0
@@ -76,7 +71,7 @@
     height: 8.4rem
     margin-right: 2rem
   &__get
-    padding: 2rem 3.2rem
+    padding: 2rem 3.2rem 0
   &__item
     padding: 1.6rem 0 5rem
     &+&
