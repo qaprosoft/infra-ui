@@ -5,21 +5,21 @@ import { InfoBar } from '@sh/infoBar/InfoBar'
 import { Header } from '@sh/header/Header'
 
 export const Home = () => {
-    const initState = {
+    const initStateMsg = {
         isOpen: false,
         messagesAmount: Messages.length || 0,
     }
-    const [state, setState] = useState(initState)
+    const [stateMsg, setStateMsg] = useState(initStateMsg)
 
     const openInfoBar = (messagesAmount) =>
-        setState({
+        setStateMsg({
             isOpen: true,
             messagesAmount: messagesAmount,
             messages: Messages,
         })
 
     const closeInfoBar = () =>
-        setState({ ...state, isOpen: false, messagesAmount: 0 })
+        setStateMsg({ ...stateMsg, isOpen: false, messagesAmount: 0 })
 
     const updateInfoBar = () => {
         console.log('------  update messages --------')
@@ -28,16 +28,16 @@ export const Home = () => {
     return (
         <>
             <Header
-                messagesAmount={state.messagesAmount}
+                messagesAmount={stateMsg.messagesAmount}
                 openInfoBar={openInfoBar}
             />
             <div className="wp__content">
                 <SCards cards={DataCards} />
             </div>
             <InfoBar
-                isOpen={state.isOpen}
-                messages={state.messages}
-                messagesAmount={state.messagesAmount}
+                isOpen={stateMsg.isOpen}
+                messages={stateMsg.messages}
+                messagesAmount={stateMsg.messagesAmount}
                 closeInfoBar={closeInfoBar}
                 updateInfoBar={updateInfoBar}
             />
