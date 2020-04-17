@@ -1,3 +1,5 @@
+// TODO: Remove
+
 import React from 'react'
 import bgStat from '@img/stat.jpg'
 

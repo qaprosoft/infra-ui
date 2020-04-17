@@ -2,7 +2,7 @@ import React from 'react'
 import { BCard } from '@c-b/b-card/BCard'
 import { PropTypes } from 'prop-types'
 
-const SCards = ({ cards, openInfoBar }) => {
+const SCards = ({ cards }) => {
     return (
         <div className="s-cards">
             <div className="container">
@@ -11,10 +11,7 @@ const SCards = ({ cards, openInfoBar }) => {
                         {cards.map((item, i) => {
                             return (
                                 <div className="s-cards__item" key={i}>
-                                    <BCard
-                                        card={item}
-                                        openInfoBar={openInfoBar}
-                                    />
+                                    <BCard card={item} />
                                 </div>
                             )
                         })}

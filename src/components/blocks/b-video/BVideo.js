@@ -1,3 +1,5 @@
+// TODO: Remove
+
 import React from 'react'
 import bgVideo from '@img/bg-video.jpg'
 import { Icon } from '@sh/icons/Icon'

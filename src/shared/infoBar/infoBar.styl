@@ -38,37 +38,25 @@
     overflow-y auto
     customScroll()
   &__head
+    display flex
+    align-items center
     padding: 1.5rem 3rem
     border-bottom: 1px solid $light-blue
     .icon-cross
       width: 1.4rem
       height: 1.4rem
       fill $dark-blue
+  &__msg
+    color $light-blue
   &__btn
     &-close
       padding: 1rem
-    &-update
-      display: block
-      width: 100%
-      height: 4rem
-      font-size 1.2rem
-      font-weight: 600
-      color $dark-blue
-      background: rgba(41, 22, 138, 0.04);
-      border-radius: 2rem
-      margin-top: 3rem
+      margin-right: 2rem
     &-close
-    &-update
       .desktop &
         tro()
         &:hover
           opacity .7
-  &__top
-    padding: 3.2rem
-    border-bottom: 1px solid $light-blue
-    &-inner
-      display: flex
-      align-items: center
   &__img
     display: block
     flex-shrink 0
@@ -76,7 +64,7 @@
     height: 8.4rem
     margin-right: 2rem
   &__get
-    padding: 2rem 3.2rem
+    padding: 2rem 3.2rem 0
   &__item
     padding: 1.6rem 0 5rem
     &+&
@@ -88,11 +76,6 @@
         top: 0
         left: 0
         background $light-blue
-    &-top
-      display: flex
-      align-items: flex-end
-      justify-content: space-between
-      margin-bottom: 2rem
     &-date
       font-weight: 600
       line-height: 1.3

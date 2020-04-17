@@ -2,7 +2,7 @@ import React from 'react'
 import { Icon } from '@sh/icons/Icon'
 import { PropTypes } from 'prop-types'
 
-const InfoBar = ({ isOpen, infoBar, news, closeInfoBar, updateInfoBar }) => {
+const InfoBar = ({ isOpen, messages, unreadMsgAmount, closeInfoBar }) => {
     return (
         <div
             className={isOpen ? 'ib _open' : 'ib'}
@@ -17,39 +17,15 @@ const InfoBar = ({ isOpen, infoBar, news, closeInfoBar, updateInfoBar }) => {
                     >
                         <Icon name="cross" />
                     </button>
+                    <h2 className="ib__msg">
+                        Notifications (
+                        <span className="ib__msg-qty">{unreadMsgAmount}</span>)
+                    </h2>
                 </div>
-                {infoBar && (
+                {messages && (
                     <div className="ib__content">
-                        <div className="ib__top">
-                            <div className="ib__top-inner">
-                                <div className="ib__img">
-                                    <img
-                                        src={infoBar.top.logo}
-                                        alt={`logo-${infoBar.top.logo}`}
-                                        data-object-fit="contain"
-                                    />
-                                </div>
-                                <div className="ib__info">
-                                    <h1 className="ib__title">
-                                        {infoBar.top.title}
-                                    </h1>
-                                    <p className="ib__text">
-                                        {infoBar.top.text}
-                                    </p>
-                                </div>
-                            </div>
-                            {!news && (
-                                <button
-                                    className="ib__btn-update"
-                                    type="button"
-                                    onClick={() => updateInfoBar()}
-                                >
-                                    Update now
-                                </button>
-                            )}
-                        </div>
                         <div className="ib__get">
-                            {infoBar.info.map((item, i) => {
+                            {messages.map((item, i) => {
                                 return (
                                     <div className="ib__item" key={i}>
                                         <div className="ib__item-top">
@@ -81,10 +57,9 @@ const InfoBar = ({ isOpen, infoBar, news, closeInfoBar, updateInfoBar }) => {
 
 InfoBar.propTypes = {
     isOpen: PropTypes.bool,
-    infoBar: PropTypes.object,
-    news: PropTypes.number,
+    messages: PropTypes.array,
+    unreadMsgAmount: PropTypes.number,
     closeInfoBar: PropTypes.func.isRequired,
-    updateInfoBar: PropTypes.func.isRequired,
 }
 
 export { InfoBar }

@@ -1,54 +1,42 @@
 import React, { useState } from 'react'
-import {
-    DataProducts,
-    DataCards,
-    DataUpdate,
-    DataNews,
-} from '@cnt/home/dataHome'
-import { SProduct } from '@c-s/s-product/SProduct'
+import { DataCards, Messages } from '@cnt/home/dataHome'
 import { SCards } from '@c-s/s-cards/SCards'
 import { InfoBar } from '@sh/infoBar/InfoBar'
+import { Header } from '@sh/header/Header'
 
 export const Home = () => {
-    const initState = {
+    const [stateCards, setStateCards] = useState(DataCards)
+
+    const initStateMsg = {
         isOpen: false,
-        news: 0,
+        unreadMsgAmount: Messages.length || 0,
     }
-    const [state, setState] = useState(initState)
+    const [stateMsg, setStateMsg] = useState(initStateMsg)
 
-    const openInfoBar = (news) =>
-        setState({
+    const openInfoBar = (unreadMsgAmount) =>
+        setStateMsg({
             isOpen: true,
-            news: news,
-            infoBar: news ? DataNews : DataUpdate,
+            unreadMsgAmount: unreadMsgAmount,
+            messages: Messages,
         })
-    const closeInfoBar = () => setState({ ...state, isOpen: false })
 
-    const updateInfoBar = () => {
-        console.log('------  update infoBar --------')
-    }
+    const closeInfoBar = () =>
+        setStateMsg({ ...stateMsg, isOpen: false, unreadMsgAmount: 0 })
 
     return (
         <>
+            <Header
+                unreadMsgAmount={stateMsg.unreadMsgAmount}
+                openInfoBar={openInfoBar}
+            />
             <div className="wp__content">
-                <SCards cards={DataCards} openInfoBar={openInfoBar} />
-                {DataProducts.map((section, i) => {
-                    return (
-                        <SProduct
-                            top={section.top}
-                            tabsInfo={section.tabsInfo}
-                            tabsShow={section.tabsShow}
-                            key={i}
-                        />
-                    )
-                })}
+                <SCards cards={stateCards} />
             </div>
             <InfoBar
-                isOpen={state.isOpen}
-                infoBar={state.infoBar}
-                news={state.news}
+                isOpen={stateMsg.isOpen}
+                messages={stateMsg.messages}
+                unreadMsgAmount={stateMsg.unreadMsgAmount}
                 closeInfoBar={closeInfoBar}
-                updateInfoBar={updateInfoBar}
             />
         </>
     )
