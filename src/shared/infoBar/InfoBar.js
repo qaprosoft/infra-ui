@@ -2,7 +2,7 @@ import React from 'react'
 import { Icon } from '@sh/icons/Icon'
 import { PropTypes } from 'prop-types'
 
-const InfoBar = ({ isOpen, messages, messagesAmount, closeInfoBar }) => {
+const InfoBar = ({ isOpen, messages, unreadMsgAmount, closeInfoBar }) => {
     return (
         <div
             className={isOpen ? 'ib _open' : 'ib'}
@@ -19,7 +19,7 @@ const InfoBar = ({ isOpen, messages, messagesAmount, closeInfoBar }) => {
                     </button>
                     <h2 className="ib__msg">
                         Notifications (
-                        <span className="ib__msg-qty">{messagesAmount}</span>)
+                        <span className="ib__msg-qty">{unreadMsgAmount}</span>)
                     </h2>
                 </div>
                 {messages && (
@@ -58,7 +58,7 @@ const InfoBar = ({ isOpen, messages, messagesAmount, closeInfoBar }) => {
 InfoBar.propTypes = {
     isOpen: PropTypes.bool,
     messages: PropTypes.array,
-    messagesAmount: PropTypes.number,
+    unreadMsgAmount: PropTypes.number,
     closeInfoBar: PropTypes.func.isRequired,
 }
 

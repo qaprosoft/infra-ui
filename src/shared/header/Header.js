@@ -2,7 +2,7 @@ import React from 'react'
 import { Icon } from '@sh/icons/Icon'
 import { PropTypes } from 'prop-types'
 
-const Header = ({ messagesAmount, openInfoBar }) => (
+const Header = ({ unreadMsgAmount, openInfoBar }) => (
     <header className="h">
         <div className="container">
             <div className="h__inner">
@@ -14,11 +14,11 @@ const Header = ({ messagesAmount, openInfoBar }) => (
                 </div>
                 <div
                     className="h__note"
-                    onClick={() => openInfoBar(messagesAmount)}
+                    onClick={() => openInfoBar(unreadMsgAmount)}
                 >
                     <Icon name="bill" />
-                    {messagesAmount && (
-                        <span className="h__note-qty">{messagesAmount}</span>
+                    {unreadMsgAmount && (
+                        <span className="h__note-qty">{unreadMsgAmount}</span>
                     )}
                 </div>
             </div>
@@ -27,7 +27,7 @@ const Header = ({ messagesAmount, openInfoBar }) => (
 )
 
 Header.propTypes = {
-    messagesAmount: PropTypes.number,
+    unreadMsgAmount: PropTypes.number,
     openInfoBar: PropTypes.func.isRequired,
 }
 
