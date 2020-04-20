@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Messages } from '@cnt/home/dataHome'
+import { DataCards, Messages } from '@cnt/home/dataHome'
 import { SCards } from '@c-s/s-cards/SCards'
 import { InfoBar } from '@sh/infoBar/InfoBar'
 import { Header } from '@sh/header/Header'
@@ -11,18 +11,30 @@ export const Home = () => {
         isOpen: false,
         unreadMsgAmount: Messages.length || 0,
     }
+    const initStateCards = {
+        data: [],
+        loading: true,
+    }
     const [stateMsg, setStateMsg] = useState(initStateMsg)
-    const [stateCards, setStateCards] = useState({ loading: true })
+    const [stateCards, setStateCards] = useState(initStateCards)
+
+    const url = process.env.INTEGRATION_URL
 
     const getCards = async () => {
-        const res = await axios.get(process.env.INTEGRATION_URL)
-        if (res.data) {
+        const res = await axios.get(url)
+        try {
             setStateCards({ data: [...res.data], loading: false })
+        } catch (e) {
+            console.error('ERROR: ', e.message)
         }
     }
 
     useEffect(() => {
-        getCards()
+        if (url) {
+            getCards()
+        } else {
+            setStateCards({ data: [...DataCards], loading: false })
+        }
     }, [])
 
     const openInfoBar = (unreadMsgAmount) =>
