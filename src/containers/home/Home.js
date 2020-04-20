@@ -1,17 +1,29 @@
-import React, { useState } from 'react'
-import { DataCards, Messages } from '@cnt/home/dataHome'
+import React, { useState, useEffect } from 'react'
+import { Messages } from '@cnt/home/dataHome'
 import { SCards } from '@c-s/s-cards/SCards'
 import { InfoBar } from '@sh/infoBar/InfoBar'
 import { Header } from '@sh/header/Header'
+import { BLoader } from '@c-b/b-loader/BLoader'
+import axios from 'axios'
 
 export const Home = () => {
-    const [stateCards, setStateCards] = useState(DataCards)
-
     const initStateMsg = {
         isOpen: false,
         unreadMsgAmount: Messages.length || 0,
     }
     const [stateMsg, setStateMsg] = useState(initStateMsg)
+    const [stateCards, setStateCards] = useState({ loading: true })
+
+    const getCards = async () => {
+        const res = await axios.get(process.env.INTEGRATION_URL)
+        if (res.data) {
+            setStateCards({ data: [...res.data], loading: false })
+        }
+    }
+
+    useEffect(() => {
+        getCards()
+    }, [])
 
     const openInfoBar = (unreadMsgAmount) =>
         setStateMsg({
@@ -30,7 +42,11 @@ export const Home = () => {
                 openInfoBar={openInfoBar}
             />
             <div className="wp__content">
-                <SCards cards={stateCards} />
+                {stateCards.loading ? (
+                    <BLoader />
+                ) : (
+                    <SCards cards={stateCards.data} />
+                )}
             </div>
             <InfoBar
                 isOpen={stateMsg.isOpen}

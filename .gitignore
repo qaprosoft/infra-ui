@@ -6,6 +6,7 @@ node_modules/
 npm-debug.log
 
 # OS or Editor folders
+.env
 .idea/
 .svn/
 .git/

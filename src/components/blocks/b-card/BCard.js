@@ -5,17 +5,16 @@ import { PropTypes } from 'prop-types'
 const BCard = ({ card }) => {
     return (
         <div className="b-card">
-            <LSocial list={card.social} />
-            <a className="b-card__inner" href={card.href} target="_blank">
+            <a className="b-card__inner" href={card.url} target="_blank">
                 <div className="b-card__content">
                     <div className="b-card__img">
                         <img
-                            src={card.logo}
-                            alt={`logo-${card.logo}`}
+                            src={card.icon}
+                            alt={`logo-${card.name}`}
                             data-object-fit="contain"
                         />
                     </div>
-                    <h1 style={{ color: card.color }}>{card.title}</h1>
+                    <h1>{card.name}</h1>
                 </div>
             </a>
         </div>
