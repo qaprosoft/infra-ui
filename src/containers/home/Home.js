@@ -21,20 +21,19 @@ export const Home = () => {
     const url = process.env.INTEGRATION_URL
 
     const getCards = async () => {
-        const res = await axios.get(url)
         try {
-            setStateCards({ data: [...res.data], loading: false })
+            const res = await axios.get(url)
+            setStateCards({ data: res.data, loading: false })
         } catch (e) {
-            console.error('ERROR: ', e.message)
+            setStateCards({ data: DataCards, loading: false })
         }
     }
 
     useEffect(() => {
-        if (url) {
-            getCards()
-        } else {
-            setStateCards({ data: [...DataCards], loading: false })
+        if (!url) {
+            return setStateCards({ data: DataCards, loading: false })
         }
+        getCards()
     }, [])
 
     const openInfoBar = (unreadMsgAmount) =>

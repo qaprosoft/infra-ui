@@ -23,7 +23,7 @@ const SCards = ({ cards }) => {
 }
 
 SCards.propTypes = {
-    cards: PropTypes.arrayOf(PropTypes.object),
+    cards: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
 export { SCards }

@@ -1,3 +1,5 @@
+// TODO: Remove
+
 import React from 'react'
 import { Icon } from '@sh/icons/Icon'
 import { PropTypes } from 'prop-types'
