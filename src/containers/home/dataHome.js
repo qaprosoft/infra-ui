@@ -1,73 +1,43 @@
 import React from 'react'
-import imgCarina from '@img/logo-carina.png'
-import imgZafira from '@img/logo-zafira.png'
-import tab1 from '@img/tab-1.png'
-import tab2 from '@img/tab-2.png'
-import tab3 from '@img/tab-3.png'
-import tab4 from '@img/tab-4.png'
-import tab5 from '@img/tab-5.png'
 import { BVideo } from '@c-b/b-video/BVideo'
 import { BStat } from '@c-b/b-stat/BStat'
-import jenkins from '@img/logo-jenkins.png'
-import fiverr from '@img/logo-fiver.png'
 import sonar from '@img/logo-sonar.png'
-import qps from '@img/logo-qps.png'
 
 export const DataCards = [
     {
-        logo: jenkins,
-        title: 'Jenkins',
-        color: '#29168A',
-        href: 'https://externalpage',
-        social: [
-            { icon: 'git', href: 'https://...' },
-            { icon: 'telegram', href: 'https://...' },
-            { icon: 'web', href: 'https://...' },
-        ],
+        name: 'QTEST',
+        icon: '',
+        url: 'nlnlknlknm',
     },
     {
-        logo: fiverr,
-        title: 'Zafira',
-        color: '#17D69C',
-        href: 'https://externalpage',
-        social: [
-            { icon: 'git', href: 'https://...' },
-            { icon: 'telegram', href: 'https://...' },
-            { icon: 'web', href: 'https://...' },
-        ],
+        name: 'JIRA',
+        icon: '',
+        url: 'https://solvd.atlassian.net',
     },
     {
-        logo: sonar,
-        title: 'Sonar',
-        color: '#70BFFE',
-        href: 'https://externalpage',
-        social: [
-            { icon: 'git', href: 'https://...' },
-            { icon: 'telegram', href: 'https://...' },
-            { icon: 'web', href: 'https://...' },
-        ],
+        name: 'Jenkins bas2',
+        icon: '',
+        url: 'http://wrongurl.com',
     },
     {
-        logo: qps,
-        title: 'Selenium Hub',
-        color: '#D04678',
-        href: 'https://externalpage',
-        social: [
-            { icon: 'git', href: 'https://...' },
-            { icon: 'telegram', href: 'https://...' },
-            { icon: 'web', href: 'https://...' },
-        ],
+        name: 'JENKINS',
+        icon: '',
+        url: 'https://ci.qaprosoft.farm',
     },
     {
-        logo: qps,
-        title: 'Selenium Hub',
-        color: '#D04678',
-        href: 'https://externalpage',
-        social: [
-            { icon: 'git', href: 'https://...' },
-            { icon: 'telegram', href: 'https://...' },
-            { icon: 'web', href: 'https://...' },
-        ],
+        name: 'SELENIUM',
+        icon: '',
+        url: 'https://hub.zebrunner.com/wd/hub',
+    },
+    {
+        name: 'ZEBRUNNER',
+        icon: '',
+        url: 'https://hub.zebrunner.com/wd/hub-1',
+    },
+    {
+        name: 'BROWSERSTACK',
+        icon: '',
+        url: 'https://hub-cloud.browserstack.com/wd/hub',
     },
 ]
 

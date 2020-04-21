@@ -1,4 +1,5 @@
 const path = require('path')
+const Dotenv = require('dotenv-webpack')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -56,6 +57,7 @@ const babelOptions = (preset) => {
 
 const plugins = () => {
     const base = [
+        new Dotenv(),
         new HTMLWebpackPlugin({
             template: 'index.html',
             minify: {
